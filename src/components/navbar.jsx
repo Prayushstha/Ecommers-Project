@@ -1,39 +1,40 @@
-import '../styles/navbar.css'
+import "../styles/navbar.css";
 
-export function NavBar(){
-    return (
-        <>
-         <div className="header">
-      <div className="left-section">
-        <a href="/" className="header-link">
-          <img className="logo"
-            src='images/logo-white.png' />
-          <img className="mobile-logo"
-            src='/images/mobile-logo-white.png' />
-        </a>
+export function NavBar({ cart = []}) {
+  let totalQuantity = 0;
+  cart.forEach((element) => {
+    totalQuantity += element.quantity;
+  });
+  return (
+    <>
+      <div className="header">
+        <div className="left-section">
+          <a href="/" className="header-link">
+            <img className="logo" src="images/logo-white.png" />
+            <img className="mobile-logo" src="/images/mobile-logo-white.png" />
+          </a>
+        </div>
+
+        <div className="middle-section">
+          <input className="search-bar" type="text" placeholder="Search" />
+
+          <button className="search-button">
+            <img className="search-icon" src="/images/mobile-logo-white.png" />
+          </button>
+        </div>
+
+        <div className="right-section">
+          <a className="orders-link header-link" href="orders">
+            <span className="orders-text">Orders</span>
+          </a>
+
+          <a className="cart-link header-link" href="checkout">
+            <img className="cart-icon" src="images/icons/cart-icon.png" />
+            <div className="cart-quantity">{totalQuantity}</div>
+            <div className="cart-text">Cart</div>
+          </a>
+        </div>
       </div>
-
-      <div className="middle-section">
-        <input className="search-bar" type="text" placeholder="Search" />
-
-        <button className="search-button">
-          <img className="search-icon" src='/images/mobile-logo-white.png' />
-        </button>
-      </div>
-
-      <div className="right-section">
-        <a className="orders-link header-link" href="orders">
-
-          <span className="orders-text">Orders</span>
-        </a>
-
-        <a className="cart-link header-link" href="checkout">
-          <img className="cart-icon" src='images/icons/cart-icon.png' />
-          <div className="cart-quantity">3</div>
-          <div className="cart-text">Cart</div>
-        </a>
-      </div>
-    </div>
     </>
-    )
+  );
 }

@@ -1,47 +1,60 @@
-import '../styles/navbar.css'
-import '../styles/tracking.css'
-import {NavBar} from '../components/navbar.jsx'
+import "../styles/navbar.css";
+import "../styles/tracking.css";
+import { NavBar } from "../components/navbar.jsx";
+import { Fragment, useEffect, useState } from "react";
+import dayjs from "dayjs";
+import { useParams } from "react-router";
+import axios from "axios";
 
-export function TrackingPage(){
-    return (
-        <>
-          <div class="tracking-page">
-      <div class="order-tracking">
-        <a class="back-to-orders-link link-primary" href="orders">
-          View all orders
-        </a>
+export function TrackingPage({ orders }) {
+  const {orderId,productId} = useParams();
+  const [trackingOrder,setTrackingOrder] = useState(null);
+  
+  useEffect(()=>{
+    axios.get(`http://localhost:3000/api/orders/${orderId}?expand=products`).then((response)=>{
+      setTrackingOrder(response.data);
+      console.log(response.data)
+    })
+  },[orderId])
+  if(!trackingOrder) return null;
+  return (
+    <>
+      <title>Checkout</title>
+    <NavBar/>
+      <div className="tracking-page">
+        <div className="order-tracking">
+          <a className="back-to-orders-link link-primary" href="orders">
+            View all orders
+          </a>
+          {
+         
+            trackingOrder.find((item) => {
+              return (
+                <Fragment key={item.productId}>
+                  <div className="delivery-date">
+                    {dayjs(item.estimatedDeliveryTimeMs).format('MMMM D')}
+                  </div>
+                  <div className="product-info">{item.product.name}</div>
+                  <div className="product-info">Quantity: {item.quantity}</div>
+                  <img
+                    className="product-image"
+                    src={item.product.image}
+                  />
 
-        <div class="delivery-date">
-          Arriving on Monday, June 13
-        </div>
-
-        <div class="product-info">
-          Black and Gray Athletic Cotton Socks - 6 Pairs
-        </div>
-
-        <div class="product-info">
-          Quantity: 1
-        </div>
-
-        <img class="product-image" src="images/products/athletic-cotton-socks-6-pairs.jpg" />
-
-        <div class="progress-labels-container">
-          <div class="progress-label">
-            Preparing
-          </div>
-          <div class="progress-label current-status">
-            Shipped
-          </div>
-          <div class="progress-label">
-            Delivered
-          </div>
-        </div>
-
-        <div class="progress-bar-container">
-          <div class="progress-bar"></div>
+                  <div className="progress-labels-container">
+                    <div className="progress-label">Preparing</div>
+                    <div className="progress-label current-status">Shipped</div>
+                    <div className="progress-label">Delivered</div>
+                  </div>
+                  <div className="progress-bar-container">
+                    <div className="progress-bar"></div>
+                  </div>
+                </Fragment>
+              )
+            )
+          }
         </div>
       </div>
-    </div>
-        </>
-    )
+    </>
+  );
 }
