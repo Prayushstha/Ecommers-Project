@@ -4,14 +4,13 @@ import { formatcurrency } from "../utils/price.js";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-export function HomePage({cart}) {
+export function HomePage({ cart, loadCart }) {
   const [products, setProducts] = useState([]);
- 
+
   useEffect(() => {
     axios.get("http://localhost:3000/api/products").then((response) => {
       setProducts(response.data);
     });
-  
   }, []);
 
   return (
@@ -61,7 +60,17 @@ export function HomePage({cart}) {
                   Added
                 </div>
 
-                <button className="add-to-cart-button button-primary">
+                <button
+                  className="add-to-cart-button button-primary"
+                  onClick={async () => {
+                    console.log("sending productID", product.id);
+                    await axios.post("http://localhost:3000/api/cart-items", {
+                      productId: product.id,
+                      quantity: 1,
+                    });
+                    await loadCart();
+                  }}
+                >
                   Add to Cart
                 </button>
               </div>
