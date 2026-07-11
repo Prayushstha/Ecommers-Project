@@ -68,7 +68,7 @@ export function HomePage({cart}) {
             );
           })}
         </div>
-      </div>{" "}
+      </div>
     </>
   );
 }

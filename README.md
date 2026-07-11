@@ -1,12 +1,68 @@
-# React + Vite
+## Ecommerce Project Using ReactJS
+Not actually a proper project. 
+Just learning about react by following a youtube course:
+#### The link to the course I am following
+[COURSE](https://www.youtube.com/watch?v=TtPXvEcE11E)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### File Structure for the project
+```
+Ecommers-Project/
+├── ecommerce-backend-ai/
+├── node_modules/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── backend/
+│   │   ├── data/
+│   │   ├── cart.json
+│   │   ├── deliveryOptions.json
+│   │   ├── orders.json
+│   │   └── products.json
+│   ├── components/
+│   │   └── navbar.jsx
+│   ├── pages/
+│   │   ├── checkout.jsx
+│   │   ├── homepage.jsx
+│   │   ├── orders.jsx
+│   │   └── tracking.jsx
+│   ├── styles/
+│   │   ├── checkout.css
+│   │   ├── homepage.css
+│   │   ├── navbar.css
+│   │   ├── orders.css
+│   │   └── tracking.css
+│   ├── utils/
+│   │   └── price.js
+│   ├── App.css
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+└── README.md
+```
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Progress on the course
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+#### Sections:
+```
+0:00 Intro 
+1:20 1. React Basics, JSX
+40:16 2. Components, Props, Start the Chatbot Project
+1:36:49 3. State, Event Handlers, Chatbot Project Features
+2:42:41 4. CSS with React, Hooks, Finish Chatbot Project
+3:48:49 5. Proper React Setup with Vite
+4:59:29 6. React Router, Git, Start the Ecommerce Project
+6:09:59 7. React with Backend, Data Fetching, Load Ecommerce Project Data
+8:00:58 8. Data Mutation, Update Ecommerce Project Data
+8:50:10 9. Automated Tests in React with Vitest
+9:50:31 10. Deploy React to the Internet, Intro to AWS
+10:41:06 11. React 19 Updates
+10:50:13 TypeScript with React
+11:24:12 AI with React
+11:31:09 Conclusion and Next Steps 
+```
