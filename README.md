@@ -48,21 +48,19 @@ Ecommers-Project/
 
 ### Progress on the course
 
-#### Sections:
-```
-0:00 Intro 
-1:20 1. React Basics, JSX
-40:16 2. Components, Props, Start the Chatbot Project
-1:36:49 3. State, Event Handlers, Chatbot Project Features
-2:42:41 4. CSS with React, Hooks, Finish Chatbot Project
-3:48:49 5. Proper React Setup with Vite
-4:59:29 6. React Router, Git, Start the Ecommerce Project
-6:09:59 7. React with Backend, Data Fetching, Load Ecommerce Project Data
-8:00:58 8. Data Mutation, Update Ecommerce Project Data
-8:50:10 9. Automated Tests in React with Vitest
-9:50:31 10. Deploy React to the Internet, Intro to AWS
-10:41:06 11. React 19 Updates
-10:50:13 TypeScript with React
-11:24:12 AI with React
-11:31:09 Conclusion and Next Steps 
-```
+#### Progress
+- [x] 0:00 Intro
+- [x] 1:20 1. React Basics, JSX
+- [x] 40:16 2. Components, Props, Start the Chatbot Project
+- [x] 1:36:49 3. State, Event Handlers, Chatbot Project Features
+- [x] 2:42:41 4. CSS with React, Hooks, Finish Chatbot Project
+- [x] 3:48:49 5. Proper React Setup with Vite
+- [x] 4:59:29 6. React Router, Git, Start the Ecommerce Project
+- [`] 6:09:59 7. React with Backend, Data Fetching, Load Ecommerce Project Data
+- [ ] 8:00:58 8. Data Mutation, Update Ecommerce Project Data
+- [ ] 8:50:10 9. Automated Tests in React with Vitest
+- [ ] 9:50:31 10. Deploy React to the Internet, Intro to AWS
+- [ ] 10:41:06 11. React 19 Updates
+- [ ] 10:50:13 TypeScript with React
+- [ ] 11:24:12 AI with React
+- [ ] 11:31:09 Conclusion and Next Steps
