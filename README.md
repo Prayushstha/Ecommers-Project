@@ -20,6 +20,12 @@ Ecommers-Project/
 │   │   └── products.json
 │   ├── components/
 │   │   └── navbar.jsx
+|   |   └── cartitemdetails.jsx
+|   |   └── checkoutHeader.jsx
+|   |   └── checkoutOrderSummary.jsx
+|   |   └── checkoutPaymentSummary.jsx
+|   |   └── deliveryOptions.jsx
+|   |   └── Products.jsx
 │   ├── pages/
 │   │   ├── checkout.jsx
 │   │   ├── homepage.jsx
@@ -45,6 +51,30 @@ Ecommers-Project/
 └── README.md
 ```
 
+## How to use the code:
+
+1. Open your preferred terminal and run:
+```
+   git clone https://github.com/Prayushstha/Ecommers-Project.git
+```
+
+2. Open the project folder and install dependencies:
+```
+   npm install
+```
+
+3. Run the backend first:
+```
+   cd ecommerce-backend-ai
+   npm run dev
+```
+
+4. Open a new terminal (in the project root, not inside `ecommerce-backend-ai`) and run:
+```
+   npm run dev
+```
+
+5. Copy the link shown in the terminal and paste it into your browser.
 
 ### Progress on the course
 
