@@ -16,10 +16,12 @@ export function CheckOut({ cart, loadCart }) {
       .then((response) => {
         setDeliveryOptions(response.data);
       });
-    axios.get("http://localhost:3000/api/payment-summary").then((response) => {
+  }, []);
+  useEffect(()=>{
+     axios.get("http://localhost:3000/api/payment-summary").then((response) => {
       setPaymentSummary(response.data);
     });
-  }, []);
+  },[cart])
 
 
   return (
