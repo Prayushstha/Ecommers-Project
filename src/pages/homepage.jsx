@@ -1,7 +1,11 @@
 import { NavBar } from "../components/navbar.jsx";
 import "../styles/homepage.css";
 import { Product } from "../components/Product.jsx";
+
 export function HomePage({ cart, products, loadCart,quantity,setQuantity }) {
+
+
+
 
   return (
     <>

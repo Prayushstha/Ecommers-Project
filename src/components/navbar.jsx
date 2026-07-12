@@ -1,10 +1,19 @@
 import "../styles/navbar.css";
+import { useState } from "react";
+import { useNavigate } from "react-router";
+import { useSearchParams } from "react-router";
 
-export function NavBar({ cart = []}) {
+export function NavBar({ cart = [] }) {
+  const [searchParams] = useSearchParams();
+  const search = searchParams.get('search');
+  const [searchText, setSearchText] = useState(search);
+  const navToHome = useNavigate();
+
   let totalQuantity = 0;
   cart.forEach((element) => {
     totalQuantity += element.quantity;
   });
+  
   return (
     <>
       <div className="header">
@@ -16,9 +25,23 @@ export function NavBar({ cart = []}) {
         </div>
 
         <div className="middle-section">
-          <input className="search-bar" type="text" placeholder="Search" />
+          <input
+            className="search-bar"
+            type="text"
+            value={searchText}
+            placeholder="Search"
+            onChange={(e) => {
+              setSearchText(e.target.value);
+            }}
+          />
 
-          <button className="search-button">
+          <button
+            className="search-button"
+            onClick={() => {
+              console.log(searchText);
+              navToHome(`/?search=${searchText}`);
+            }}
+          >
             <img className="search-icon" src="/images/mobile-logo-white.png" />
           </button>
         </div>
