@@ -3,9 +3,20 @@ import "../styles/navbar.css";
 import { NavBar } from "../components/navbar.jsx";
 import { formatcurrency } from "../utils/price.js";
 import dayjs from "dayjs";
+import axios from "axios";
 
-export function Orders({ cart,orders }) {
- 
+export function Orders({ cart,orders,loadCart }) {
+
+   const addToCart = async (product) => {
+    console.log(product)
+    console.log("sending productID", product.id);
+    await axios.post("http://localhost:3000/api/cart-items", {
+      productId: product.id,
+      quantity: 1
+    });
+    await loadCart();
+  };
+  
   return (
     <>
       <title>Checkout</title>
@@ -57,7 +68,7 @@ export function Orders({ cart,orders }) {
                             className="buy-again-icon"
                             src="images/icons/buy-again.png"
                           />
-                          <span className="buy-again-message">Add to Cart</span>
+                          <span className="buy-again-message" onClick={() => addToCart(item.product)}>Add to Cart</span>
                         </button>
                       </div>
 

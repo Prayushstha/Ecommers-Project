@@ -1,16 +1,7 @@
 import { NavBar } from "../components/navbar.jsx";
 import "../styles/homepage.css";
-import axios from "axios";
-import { useEffect, useState } from "react";
 import { Product } from "../components/Product.jsx";
-export function HomePage({ cart, loadCart }) {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    axios.get("http://localhost:3000/api/products").then((response) => {
-      setProducts(response.data);
-    });
-  }, []);
+export function HomePage({ cart, products, loadCart }) {
 
   return (
     <>
