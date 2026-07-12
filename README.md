@@ -57,7 +57,7 @@ Ecommers-Project/
 - [x] 3:48:49 5. Proper React Setup with Vite
 - [x] 4:59:29 6. React Router, Git, Start the Ecommerce Project
 - [x] 6:09:59 7. React with Backend, Data Fetching, Load Ecommerce Project Data
-- [ ] 8:00:58 8. Data Mutation, Update Ecommerce Project Data
+- [x] 8:00:58 8. Data Mutation, Update Ecommerce Project Data
 - [ ] 8:50:10 9. Automated Tests in React with Vitest
 - [ ] 9:50:31 10. Deploy React to the Internet, Intro to AWS
 - [ ] 10:41:06 11. React 19 Updates

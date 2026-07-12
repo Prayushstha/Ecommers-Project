@@ -2,11 +2,11 @@ import { useState,useRef } from "react";
 import { formatcurrency } from "../utils/price.js";
 import axios from "axios";
 
-export function Product({ product, loadCart }) {
+export function Product({ product, loadCart,setQuantity,quantity }) {
   const [addedToCart,setAddedToCart] = useState(false);
   const addedRef = useRef();
 
-  const [quantity, setQuantity] = useState(1);
+  
 
   const addToCart = async () => {
     await axios.post("http://localhost:3000/api/cart-items", {

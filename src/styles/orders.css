@@ -160,6 +160,12 @@
   font-size: 14px;
   padding: 8px;
 }
+.update-quantity-input{
+display: none;}
+.update-quantity-input-after{
+  display: inline;
+  width: 50px;
+}
 
 @media (max-width: 800px) {
   .orders-page .buy-again-button {

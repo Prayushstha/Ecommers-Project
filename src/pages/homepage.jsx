@@ -1,7 +1,7 @@
 import { NavBar } from "../components/navbar.jsx";
 import "../styles/homepage.css";
 import { Product } from "../components/Product.jsx";
-export function HomePage({ cart, products, loadCart }) {
+export function HomePage({ cart, products, loadCart,quantity,setQuantity }) {
 
   return (
     <>
@@ -10,7 +10,9 @@ export function HomePage({ cart, products, loadCart }) {
         <div className="products-grid">
           {products.map((product) => {
             return (
-             <Product key={product.id} product={product} loadCart={loadCart}/>
+             <Product key={product.id} product={product} 
+             quantity={quantity} setQuantity={setQuantity}
+             loadCart={loadCart}/>
             );
           })}
         </div>
