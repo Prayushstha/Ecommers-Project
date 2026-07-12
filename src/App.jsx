@@ -8,32 +8,35 @@ import { TrackingPage } from "./pages/tracking";
 import { useState, useEffect } from "react";
 import axios from "axios";
 function App() {
-  const [cart, setCart] = useState([]);
-  useEffect(() => {
+  const loadCart = async () => {
     axios
       .get("http://localhost:3000/api/cart-items?expand=product")
       .then((response) => {
         setCart(response.data);
       });
+  };
+  const [cart, setCart] = useState([]);
+  useEffect(() => {
+    loadCart();
   }, []);
 
-  const loadCart = async () => {
-    const response = await axios.get(
+  const [orders, setOrders] = useState([]);
+  useEffect(() => {
+    const response = axios.get(
       "http://localhost:3000/api/orders?expand=products",
     );
     setOrders(response.data);
     console.log(response.data);
-  };
-  const [orders, setOrders] = useState([]);
-  useEffect(() => {
-    loadCart();
   }, []);
 
   return (
     <>
       <Routes>
-        <Route path="/" element={<HomePage cart={cart} loadCart={loadCart}/>} />
-        <Route path="checkout" element={<CheckOut cart={cart} />} />
+        <Route
+          path="/"
+          element={<HomePage cart={cart} loadCart={loadCart} />}
+        />
+        <Route path="checkout" element={<CheckOut cart={cart} loadCart={loadCart}/>} />
         <Route path="orders" element={<Orders cart={cart} orders={orders} />} />
         <Route
           path="tracking/:orderId/:productId"
