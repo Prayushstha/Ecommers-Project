@@ -12,7 +12,7 @@ export function Product({ product, loadCart }) {
     console.log("sending productID", product.id);
     await axios.post("http://localhost:3000/api/cart-items", {
       productId: product.id,
-      quantity: quantity,
+      quantity
     });
     await loadCart();
     setAddedToCart(!addedToCart)
