@@ -1,4 +1,4 @@
-import { formatcurrency } from "../utils/price";
+import { formatcurrency } from "../../../utils/price";
 import axios from "axios";
 import dayjs from "dayjs";
 

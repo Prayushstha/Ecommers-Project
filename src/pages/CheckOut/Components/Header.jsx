@@ -1,5 +1,5 @@
 
-export function CheckOutHeader({cart}){
+export function Header({cart}){
       let totalQuantity = 0;
   cart.forEach((element) => {
     totalQuantity += element.quantity;

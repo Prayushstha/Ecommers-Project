@@ -1,8 +1,8 @@
 import "./App.css";
 import { Routes, Route } from "react-router";
 // Import pages
-import { HomePage } from "./pages/homepage";
-import { CheckOut } from "./pages/checkout";
+import { HomePage } from "./pages/Homepage/homepage";
+import { CheckOut } from "./pages/CheckOut/checkout";
 import { Orders } from "./pages/orders";
 import { TrackingPage } from "./pages/tracking";
 import { useState, useEffect } from "react";
