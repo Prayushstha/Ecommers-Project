@@ -6,11 +6,11 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      "/api": {
-        target: "https//localhost:3000",
+      '/api': {
+        target: "http://localhost:3000",
       },
       images: {
-        target: "https//localhost:3000",
+        target: "http://localhost:3000",
       },
     },
   },

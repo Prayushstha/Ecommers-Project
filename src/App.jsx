@@ -15,7 +15,7 @@ function App() {
   const [quantity, setQuantity] = useState(1);
   const loadCart = async () => {
     axios
-      .get("http://localhost:3000/api/cart-items?expand=product")
+      .get("/api/cart-items?expand=product")
       .then((response) => {
         setCart(response.data);
       });
@@ -28,7 +28,7 @@ function App() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get(search? `http://localhost:3000/api/products?search=${search}`: `http://localhost:3000/api/products`).then((response) => {
+    axios.get(search? `/api/products?search=${search}`: `/api/products`).then((response) => {
       setProducts(response.data);
     });
   }, [search]);
@@ -36,7 +36,7 @@ function App() {
   const [orders, setOrders] = useState([]);
   const loadOrders = async () => {
     const response = await axios.get(
-      "http://localhost:3000/api/orders?expand=products",
+      "/api/orders?expand=products",
     );
     setOrders(response.data);
   };

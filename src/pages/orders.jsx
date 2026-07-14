@@ -10,7 +10,7 @@ export function Orders({ cart,orders,loadCart }) {
    const addToCart = async (product) => {
     console.log(product)
     console.log("sending productID", product.id);
-    await axios.post("http://localhost:3000/api/cart-items", {
+    await axios.post("/api/cart-items", {
       productId: product.id,
       quantity: 1
     });

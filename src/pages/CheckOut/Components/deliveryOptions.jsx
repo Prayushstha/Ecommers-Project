@@ -22,7 +22,7 @@ export function DeliveryOptions({deliveryOptions, loadCart, cartItem}){
                           }
                           onChange={async () => {
                             await axios.put(
-                              `http://localhost:3000/api/cart-items/${cartItem.productId}`,
+                              `/api/cart-items/${cartItem.productId}`,
                               {
                                  deliveryOptionId: deliveryOption.id
                               },

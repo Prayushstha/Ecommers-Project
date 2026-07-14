@@ -9,7 +9,7 @@ export function Product({ product, loadCart,setQuantity,quantity }) {
   
 
   const addToCart = async () => {
-    await axios.post("http://localhost:3000/api/cart-items", {
+    await axios.post("/api/cart-items", {
       productId: product.id,
       quantity
     });

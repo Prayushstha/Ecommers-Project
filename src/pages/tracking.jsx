@@ -11,7 +11,7 @@ export function TrackingPage() {
   const [trackingOrder, setTrackingOrder] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/api/orders/${orderId}?expand=products`).then((response) => {
+    axios.get(`/api/orders/${orderId}?expand=products`).then((response) => {
       setTrackingOrder(response.data);
     })
   }, [orderId]);

@@ -10,7 +10,7 @@ export function PaymentSummary({ paymentSummary,loadCart, cart }) {
 
   const navigate = useNavigate();
   const placeOrder = async () =>{
-    await axios.post(`http://localhost:3000/api/orders`);
+    await axios.post(`/api/orders`);
     await loadCart();
     navigate('/orders');
   }
