@@ -1,7 +1,7 @@
 import { useState,useRef } from "react";
 import { formatcurrency } from "../utils/price.js";
 import axios from "axios";
-
+import React from "react";
 export function Product({ product, loadCart,setQuantity,quantity }) {
   const [addedToCart,setAddedToCart] = useState(false);
   const addedRef = useRef();
