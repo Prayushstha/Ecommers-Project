@@ -90,9 +90,10 @@ Ecommers-Project/
 - [x] 8:00:58 8. Data Mutation, Update Ecommerce Project Data
 - [x] 8:50:10 9. Automated Tests in React with Vitest
 - [x] 9:50:31 10. Deploy React to the Internet, Intro to AWS
-- [ ] 10:41:06 11. React 19 Updates
-- [ ] 10:50:13 TypeScript with React
-- [ ] 11:24:12 AI with React
-- [ ] 11:31:09 Conclusion and Next Steps
+- [x] 10:41:06 11. React 19 Updates
+- [x] 10:50:13 TypeScript with React
+- [x] 11:24:12 AI with React
+- [x] 11:31:09 Conclusion and Next Steps
 
 #### Started On: Jun 16, 2026
+#### Finished On: July 14th, 2026
