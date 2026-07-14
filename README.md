@@ -20,23 +20,23 @@ Ecommers-Project/
 │   │   └── products.json
 │   ├── components/
 │   │   └── navbar.jsx
-|   |   └── cartitemdetails.jsx
-|   |   └── checkoutHeader.jsx
-|   |   └── checkoutOrderSummary.jsx
-|   |   └── checkoutPaymentSummary.jsx
-|   |   └── deliveryOptions.jsx
-|   |   └── Products.jsx
 │   ├── pages/
-│   │   ├── checkout.jsx
-│   │   ├── homepage.jsx
+│   │   ├── CheckOut/
+│   │   │   ├── Components/
+│   │   │   │   ├── cartitemdetails.jsx
+│   │   │   │   ├── deliveryOptions.jsx
+│   │   │   │   ├── Header.jsx
+│   │   │   │   ├── OrderSummary.jsx
+│   │   │   │   └── PaymentSummary.jsx
+│   │   │   └── checkout.jsx
+│   │   ├── Homepage/
+│   │   │   ├── Components/
+│   │   │   │   ├── Product.jsx
+│   │   │   │   └── product.test.jsx
+│   │   │   └── homepage.jsx
 │   │   ├── orders.jsx
 │   │   └── tracking.jsx
 │   ├── styles/
-│   │   ├── checkout.css
-│   │   ├── homepage.css
-│   │   ├── navbar.css
-│   │   ├── orders.css
-│   │   └── tracking.css
 │   ├── utils/
 │   │   └── price.js
 │   ├── App.css
