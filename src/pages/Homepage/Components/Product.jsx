@@ -1,20 +1,19 @@
-import { useState,useRef } from "react";
+import { useState, useRef } from "react";
 import { formatcurrency } from "../../../utils/price.js";
 import axios from "axios";
 import React from "react";
-export function Product({ product, loadCart,setQuantity,quantity }) {
-  const [addedToCart,setAddedToCart] = useState(false);
+export function Product({ product, loadCart }) {
+  const [quantity, setQuantity] = useState(1);
+
+  const [addedToCart, setAddedToCart] = useState(false);
   const addedRef = useRef();
-
-  
-
   const addToCart = async () => {
     await axios.post("/api/cart-items", {
       productId: product.id,
-      quantity
+      quantity,
     });
     await loadCart();
-    setAddedToCart(!addedToCart)
+    setAddedToCart(!addedToCart);
   };
 
   const quantitySelector = (e) => {
@@ -48,7 +47,11 @@ export function Product({ product, loadCart,setQuantity,quantity }) {
         </select>
       </div>
       <div className="product-spacer"></div>
-      <div className="added-to-cart" ref={addedRef} style={addedToCart? {opacity: 1} : {}}>
+      <div
+        className="added-to-cart"
+        ref={addedRef}
+        style={addedToCart ? { opacity: 1 } : {}}
+      >
         <img src="images/icons/checkmark.png" />
         Added
       </div>

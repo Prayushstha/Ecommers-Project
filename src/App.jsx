@@ -12,7 +12,7 @@ function App() {
   const [searchParams] = useSearchParams();
   const search = searchParams.get("search");
 
-  const [quantity, setQuantity] = useState(1);
+ 
   const loadCart = async () => {
     axios
       .get("/api/cart-items?expand=product")
@@ -54,8 +54,7 @@ function App() {
               cart={cart}
               products={products}
               loadCart={loadCart}
-              quantity={quantity}
-              setQuantity={setQuantity}
+
             />
           }
         />
@@ -64,8 +63,7 @@ function App() {
           element={
             <CheckOut
               cart={cart}
-              quantity={quantity}
-              setQuantity={setQuantity}
+
               products={products}
               loadCart={loadCart}
             />
