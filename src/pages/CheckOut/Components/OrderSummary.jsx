@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { CartItemDetails } from "../../../components/cartitemdetails.jsx";
+import { CartItemDetails } from "./cartitemdetails.jsx";
 export function OrderSummary({ deliveryOptions,products, loadCart, cart }) {
   return (
     <div className="order-summary">

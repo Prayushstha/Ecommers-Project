@@ -1,6 +1,6 @@
-import { DeliveryOptions } from "../pages/CheckOut/Components/deliveryOptions.jsx";
+import { DeliveryOptions } from "./deliveryOptions.jsx";
 import { useState } from "react";
-import { formatcurrency } from "../utils/price.js";
+import { formatcurrency } from "../../../utils/price.js";
 import axios from "axios";
 
 export function CartItemDetails({ cartItem, loadCart, deliveryOptions }) {
