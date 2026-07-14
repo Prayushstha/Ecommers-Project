@@ -11,14 +11,14 @@ export function CheckOut({ cart,products, loadCart }) {
   useEffect(() => {
     axios
       .get(
-        "http://localhost:3000/api/delivery-options?expand=estimatedDeliveryTime",
+        "/api/delivery-options?expand=estimatedDeliveryTime",
       )
       .then((response) => {
         setDeliveryOptions(response.data);
       });
   }, []);
   useEffect(()=>{
-     axios.get("http://localhost:3000/api/payment-summary").then((response) => {
+     axios.get("/api/payment-summary").then((response) => {
       setPaymentSummary(response.data);
     });
   },[cart])
